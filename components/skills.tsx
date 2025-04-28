@@ -1,15 +1,25 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { Card, CardContent } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+
+type Skill = {
+  name: string;
+};
+
+interface SkillCardProps {
+  title: string;
+  skills: Skill[];
+  variants: any;
+}
 
 export default function Skills() {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.1,
-  })
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -19,7 +29,7 @@ export default function Skills() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -28,34 +38,34 @@ export default function Skills() {
       y: 0,
       transition: { duration: 0.5 },
     },
-  }
+  };
 
   const frontendSkills = [
-    { name: "JavaScript", score: 98 },
-    { name: "React.js", score: 92 },
-    { name: "Next.js", score: 86 },
-    { name: "TypeScript", score: 97 },
-    { name: "HTML/CSS", score: 98 },
-    { name: "React Native", score: 100 },
-  ]
+    { name: "JavaScript" },
+    { name: "React.js" },
+    { name: "Next.js" },
+    { name: "TypeScript" },
+    { name: "HTML/CSS" },
+    { name: "React Native" },
+  ];
 
   const backendSkills = [
-    { name: "Node.js", score: 94 },
-    { name: "Express.js", score: 94 },
-    { name: "MongoDB", score: 96 },
-    { name: "SQL", score: 92 },
-    { name: "GraphQL", score: 100 },
-    { name: "Redis", score: 100 },
-  ]
+    { name: "Node.js" },
+    { name: "Express.js" },
+    { name: "MongoDB" },
+    { name: "SQL" },
+    { name: "GraphQL" },
+    { name: "Redis" },
+  ];
 
   const otherSkills = [
-    { name: "Git/GitHub", score: 100 },
-    { name: "REST API", score: 91 },
-    { name: "Testing", score: 40 },
-    { name: "Cloud Deployment", score: 100 },
-    { name: "OOP", score: 98 },
-    { name: "Problem Solving", score: 90 },
-  ]
+    { name: "Git/GitHub" },
+    { name: "REST API" },
+    { name: "Testing" },
+    { name: "Cloud Deployment" },
+    { name: "OOP" },
+    { name: "Problem Solving" },
+  ];
 
   return (
     <section id="skills" className="py-20 bg-white dark:bg-black">
@@ -64,7 +74,8 @@ export default function Skills() {
           <h2 className="text-3xl font-bold mb-4">My Skills</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
-            Through my education at Hacktiv8 and personal projects, I've developed a strong set of technical skills.
+            Through my education at Hacktiv8 and personal projects, I've
+            developed a strong set of technical skills.
           </p>
         </div>
 
@@ -75,44 +86,46 @@ export default function Skills() {
           variants={containerVariants}
           className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto"
         >
-          <SkillCard title="Frontend" skills={frontendSkills} variants={itemVariants} />
-          <SkillCard title="Backend" skills={backendSkills} variants={itemVariants} />
-          <SkillCard title="Other" skills={otherSkills} variants={itemVariants} />
+          <SkillCard
+            title="Frontend"
+            skills={frontendSkills}
+            variants={itemVariants}
+          />
+          <SkillCard
+            title="Backend"
+            skills={backendSkills}
+            variants={itemVariants}
+          />
+          <SkillCard
+            title="Other"
+            skills={otherSkills}
+            variants={itemVariants}
+          />
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
 
-function SkillCard({ title, skills, variants }) {
+function SkillCard({ title, skills, variants }: SkillCardProps) {
   return (
     <motion.div variants={variants}>
       <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 h-full">
         <CardContent className="p-6">
           <h3 className="text-xl font-semibold mb-6 text-center">{title}</h3>
-          <div className="space-y-6">
-            {skills.map((skill) => (
-              <div key={skill.name}>
-                <div className="flex justify-between mb-2">
-                  <span className="text-gray-700 dark:text-gray-300">{skill.name}</span>
-                  <span className="text-gray-600 dark:text-gray-400">{skill.score}%</span>
-                </div>
-                <Progress
-                  value={skill.score}
-                  className="h-2 bg-gray-200 dark:bg-gray-800"
-                  indicatorClassName={`${
-                    skill.score >= 90
-                      ? "bg-gradient-to-r from-purple-500 to-pink-500"
-                      : skill.score >= 70
-                        ? "bg-purple-500"
-                        : "bg-gray-500"
-                  }`}
-                />
-              </div>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {skills.map((skill: Skill) => (
+              <Badge
+                key={skill.name}
+                variant="outline"
+                className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 text-gray-800 dark:text-gray-200 border-purple-200 dark:border-purple-800 px-3 py-1 text-sm transition-all hover:scale-105"
+              >
+                {skill.name}
+              </Badge>
             ))}
           </div>
         </CardContent>
       </Card>
     </motion.div>
-  )
+  );
 }

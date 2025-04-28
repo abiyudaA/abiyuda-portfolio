@@ -1,31 +1,31 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { motion } from "framer-motion"
-import { isBrowser } from "@/utils/client-utils"
-import { ThemeToggle } from "@/components/theme-toggle"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X, Github, Linkedin, Instagram } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { isBrowser } from "@/utils/client-utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    if (!isBrowser) return
+    if (!isBrowser) return;
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setScrolled(true)
+        setScrolled(true);
       } else {
-        setScrolled(false)
+        setScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: "Home", href: "#home" },
@@ -33,13 +33,22 @@ export default function Navbar() {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
   const socialLinks = [
-    { icon: <Github className="h-5 w-5" />, href: "https://github.com/abiyuda" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "https://linkedin.com/in/abiyuda" },
-    { icon: <Mail className="h-5 w-5" />, href: "mailto:yudaabiabdulhaq@gmail.com" },
-  ]
+    {
+      icon: <Github className="h-5 w-5" />,
+      href: "https://github.com/abiyudaA",
+    },
+    {
+      icon: <Linkedin className="h-5 w-5" />,
+      href: "https://linkedin.com/in/abiyuda-abdulhaq-35b147218",
+    },
+    {
+      icon: <Instagram className="h-5 w-5" />,
+      href: "https://instagram.com/abiyuda",
+    },
+  ];
 
   return (
     <motion.nav
@@ -47,7 +56,9 @@ export default function Navbar() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/80 dark:bg-black/80 backdrop-blur-md py-2" : "bg-transparent py-4"
+        scrolled
+          ? "bg-blue-950/80 dark:bg-blue-950/80 backdrop-blur-md py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -63,7 +74,10 @@ export default function Navbar() {
           <ul className="flex gap-6">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="text-gray-300 hover:text-white transition-colors relative group">
+                <Link
+                  href={link.href}
+                  className="text-gray-300 hover:text-white transition-colors relative group"
+                >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
@@ -73,8 +87,18 @@ export default function Navbar() {
           <div className="flex gap-3 items-center">
             <ThemeToggle />
             {socialLinks.map((link, index) => (
-              <Button key={index} variant="ghost" size="icon" asChild className="rounded-full hover:bg-gray-800">
-                <Link href={link.href} target="_blank" rel="noopener noreferrer">
+              <Button
+                key={index}
+                variant="ghost"
+                size="icon"
+                asChild
+                className="rounded-full hover:bg-gray-800"
+              >
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   {link.icon}
                 </Link>
               </Button>
@@ -85,7 +109,12 @@ export default function Navbar() {
         {/* Mobile Navigation Toggle */}
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+          >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </Button>
         </div>
@@ -115,8 +144,18 @@ export default function Navbar() {
             </ul>
             <div className="flex gap-4">
               {socialLinks.map((link, index) => (
-                <Button key={index} variant="ghost" size="icon" asChild className="rounded-full hover:bg-gray-800">
-                  <Link href={link.href} target="_blank" rel="noopener noreferrer">
+                <Button
+                  key={index}
+                  variant="ghost"
+                  size="icon"
+                  asChild
+                  className="rounded-full hover:bg-gray-800"
+                >
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {link.icon}
                   </Link>
                 </Button>
@@ -126,5 +165,5 @@ export default function Navbar() {
         </motion.div>
       )}
     </motion.nav>
-  )
+  );
 }
