@@ -99,7 +99,8 @@ export default function Projects() {
     {
       id: 4,
       title: "Chiropractive",
-      description: "Chiropractic clinic web app for reservation",
+      description:
+        "Chiropractic clinic web app for reservation, payment, and admin. Credentials for Midtrans Credit Card payment: https://docs.midtrans.com/docs/testing-payment-on-sandbox.",
       image: "/images/chiropractive.png",
       tags: [
         "React",
