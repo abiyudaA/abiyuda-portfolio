@@ -42,7 +42,7 @@ export default function About() {
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-800 mx-auto mb-6"></div>
             <p className="text-gray-700 dark:text-gray-300 text-lg">
               I'm a passionate Fullstack JavaScript Developer who recently
               graduated from Hacktiv8's Full Time Program. I love building web
@@ -54,8 +54,8 @@ export default function About() {
             <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800">
               <CardContent className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="bg-purple-100 dark:bg-purple-500/20 p-3 rounded-lg">
-                    <GraduationCap className="h-6 w-6 text-purple-500 dark:text-purple-400" />
+                  <div className="bg-blue-100 dark:bg-blue-500/20 p-3 rounded-lg">
+                    <GraduationCap className="h-6 w-6 text-blue-500 dark:text-blue-400" />
                   </div>
                   <h3 className="text-xl font-semibold">Education</h3>
                 </div>

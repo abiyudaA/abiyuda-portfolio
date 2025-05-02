@@ -74,19 +74,19 @@ export default function Contact() {
 
   const contactInfo = [
     {
-      icon: <Mail className="h-5 w-5 text-purple-500 dark:text-purple-400" />,
+      icon: <Mail className="h-5 w-5 text-blue-500 dark:text-blue-400" />,
       title: "Email",
       value: "yudaabiabdulhaq@gmail.com",
       link: "mailto:yudaabiabdulhaq@gmail.com",
     },
     {
-      icon: <Phone className="h-5 w-5 text-purple-500 dark:text-purple-400" />,
+      icon: <Phone className="h-5 w-5 text-blue-500 dark:text-blue-400" />,
       title: "Phone",
       value: "+62 813 8735 6886",
       link: "https://wa.me/6281387356886",
     },
     {
-      icon: <MapPin className="h-5 w-5 text-purple-500 dark:text-purple-400" />,
+      icon: <MapPin className="h-5 w-5 text-blue-500 dark:text-blue-400" />,
       title: "Location",
       value: "Bogor, Indonesia",
       link: "https://maps.app.goo.gl/SpHuaKbrvsnDERq1A",
@@ -98,7 +98,7 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
             Have a project in mind or want to discuss potential opportunities?
             Feel free to reach out!
@@ -127,14 +127,14 @@ export default function Contact() {
                       rel="noopener noreferrer"
                       className="flex items-start gap-4 group"
                     >
-                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg group-hover:bg-purple-100 dark:group-hover:bg-purple-500/20 transition-colors">
+                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-lg group-hover:bg-blue-100 dark:group-hover:bg-blue-500/20 transition-colors">
                         {item.icon}
                       </div>
                       <div>
                         <h4 className="text-gray-500 dark:text-gray-400">
                           {item.title}
                         </h4>
-                        <p className="text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
+                        <p className="text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {item.value}
                         </p>
                       </div>
@@ -167,7 +167,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="John Doe"
                         required
-                        className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-purple-500"
+                        className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500"
                       />
                     </div>
                     <div className="space-y-2">
@@ -185,7 +185,7 @@ export default function Contact() {
                         onChange={handleChange}
                         placeholder="john@example.com"
                         required
-                        className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-purple-500"
+                        className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500"
                       />
                     </div>
                   </div>
@@ -203,7 +203,7 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Project Inquiry"
                       required
-                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-purple-500"
+                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500"
                     />
                   </div>
                   <div className="space-y-2">
@@ -220,13 +220,13 @@ export default function Contact() {
                       onChange={handleChange}
                       placeholder="Hello, I'd like to talk about..."
                       required
-                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-purple-500 min-h-[150px]"
+                      className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 focus:border-blue-500 min-h-[150px]"
                     />
                   </div>
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                    className="w-full bg-gradient-to-r from-blue-600 to-blue-900 hover:from-blue-700 hover:to-blue-950"
                   >
                     {isSubmitting ? (
                       <>

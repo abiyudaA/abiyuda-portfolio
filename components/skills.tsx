@@ -72,7 +72,7 @@ export default function Skills() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">My Skills</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto">
             Through my education at Hacktiv8 and personal projects, I've
             developed a strong set of technical skills.
@@ -118,7 +118,7 @@ function SkillCard({ title, skills, variants }: SkillCardProps) {
               <Badge
                 key={skill.name}
                 variant="outline"
-                className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 hover:from-purple-500/20 hover:to-pink-500/20 text-gray-800 dark:text-gray-200 border-purple-200 dark:border-purple-800 px-3 py-1 text-sm transition-all hover:scale-105"
+                className="bg-gradient-to-r from-blue-500/10 to-blue-800/10 hover:from-blue-500/20 hover:to-blue-800/20 text-gray-800 dark:text-gray-200 border-blue-200 dark:border-blue-800 px-3 py-1 text-sm transition-all hover:scale-105"
               >
                 {skill.name}
               </Badge>

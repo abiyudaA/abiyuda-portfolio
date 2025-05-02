@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="mb-4 md:mb-0">
             <Link
               href="#home"
-              className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500"
+              className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-800"
             >
               Abiyuda
             </Link>
@@ -53,7 +53,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-200 dark:border-gray-800 mt-6 pt-6 text-center text-gray-500 dark:text-gray-400 text-sm">
           <p className="flex items-center justify-center gap-1">
-            Made with <Heart className="h-4 w-4 text-pink-500" /> by Abiyuda
+            Made with <Heart className="h-4 w-4 text-blue-500" /> by Abiyuda
             Abdulhaq
           </p>
           <p className="mt-2">© {currentYear} All Rights Reserved</p>

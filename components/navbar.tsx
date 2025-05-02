@@ -64,7 +64,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link
           href="#home"
-          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500"
+          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-800"
         >
           Abiyuda
         </Link>
@@ -79,7 +79,7 @@ export default function Navbar() {
                   className="text-gray-300 hover:text-white transition-colors relative group"
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 transition-all duration-300 group-hover:w-full"></span>
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-800 transition-all duration-300 group-hover:w-full"></span>
                 </Link>
               </li>
             ))}

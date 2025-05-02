@@ -125,7 +125,7 @@ export default function Projects() {
       tags: ["React", "Firebase", "Tailwind CSS"],
       github: "https://github.com/abiyudaA/zalola",
       demo: "https://zalola-app.vercel.app/",
-      category: "frontend",
+      category: "fullstack",
       period: "Mar 2025 - Mar 2025",
     },
     {
@@ -151,29 +151,27 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">My Projects</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-blue-800 mx-auto mb-6"></div>
           <p className="text-gray-700 dark:text-gray-300 text-lg max-w-2xl mx-auto mb-8">
             Here are some of the projects I've worked on. Each one represents
             different skills and technologies I've mastered.
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {["all", "frontend", "backend", "fullstack", "mobile"].map(
-              (category) => (
-                <Button
-                  key={category}
-                  variant={filter === category ? "default" : "outline"}
-                  onClick={() => setFilter(category)}
-                  className={
-                    filter === category
-                      ? "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 border-0"
-                      : "border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
-                  }
-                >
-                  {category.charAt(0).toUpperCase() + category.slice(1)}
-                </Button>
-              )
-            )}
+            {["all", "fullstack", "mobile"].map((category) => (
+              <Button
+                key={category}
+                variant={filter === category ? "default" : "outline"}
+                onClick={() => setFilter(category)}
+                className={
+                  filter === category
+                    ? "bg-gradient-to-r from-blue-600 to-blue-900 hover:from-blue-700 hover:to-blue-950 border-0"
+                    : "border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                }
+              >
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </Button>
+            ))}
           </div>
         </div>
 
@@ -272,7 +270,7 @@ function ProjectCard({ project, variants }: ProjectCardProps) {
           <Button
             asChild
             size="sm"
-            className="flex-1 gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+            className="flex-1 gap-2 bg-gradient-to-r from-blue-600 to-blue-900 hover:from-blue-700 hover:to-blue-950"
           >
             <Link href={project.demo} target="_blank" rel="noopener noreferrer">
               <ExternalLink className="h-4 w-4" />
