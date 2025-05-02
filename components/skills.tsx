@@ -41,12 +41,15 @@ export default function Skills() {
   };
 
   const frontendSkills = [
-    { name: "JavaScript" },
     { name: "React.js" },
     { name: "Next.js" },
-    { name: "TypeScript" },
+    { name: "Embedded JavaScript" },
+    { name: "Redux" },
+    { name: "Tailwind CSS" },
     { name: "HTML/CSS" },
     { name: "React Native" },
+    { name: "Vite" },
+    { name: "Shadcn" },
   ];
 
   const backendSkills = [
@@ -59,10 +62,16 @@ export default function Skills() {
   ];
 
   const otherSkills = [
+    { name: "JavaScript" },
+    { name: "TypeScript" },
     { name: "Git/GitHub" },
     { name: "REST API" },
     { name: "Testing" },
+    { name: "Socket.IO" },
     { name: "Cloud Deployment" },
+    { name: "Cloudinary" },
+    { name: "Midtrans API" },
+    { name: "Expo" },
     { name: "OOP" },
     { name: "Problem Solving" },
   ];
