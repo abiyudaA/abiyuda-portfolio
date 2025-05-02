@@ -89,6 +89,21 @@ export default function Projects() {
       ],
     },
     {
+      id: 4,
+      title: "Chiropractive",
+      description: "Chiropractic clinic web app for reservation",
+      image: "/images/chiropractive.png",
+      tags: ["React", "Node.js", "Express", "MongoDB"],
+      github: "https://github.com/abiyudaA/Chiropractive",
+      demo: "https://chiropractive.vercel.app",
+      category: "fullstack",
+      period: "Mar 2025 - Apr 2025",
+      loginCredentials: [
+        { role: "Admin", email: "user1@mail.com", password: "123456" },
+        { role: "Patient", email: "user2@mail.com", password: "123456" },
+      ],
+    },
+    {
       id: 2,
       title: "Zalola",
       description: "A web based e-commerce application.",
