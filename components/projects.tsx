@@ -64,6 +64,32 @@ export default function Projects() {
 
   const projects: Project[] = [
     {
+      id: 5,
+      title: "Feet&Feeds Store",
+      description: "A web app for E-commerce store",
+      image: "/images/feetfeeds-store.png",
+      tags: ["React", "Vite", "Tailwind CSS", "JavaScript", "Node.js"],
+      github: "https://github.com/abiyudaA/Feet-Feeds",
+      demo: "https://feet-n-feeds-public.vercel.app",
+      category: "frontend",
+      period: "Mar 2025 - Mar 2025",
+    },
+    {
+      id: 6,
+      title: "Feet&Feeds CMS",
+      description:
+        "A Content Management System (CMS) web app for E-commerce store",
+      image: "/images/feetfeeds-cms.png",
+      tags: ["React", "Vite", "Tailwind CSS", "JavaScript", "Node.js"],
+      github: "https://github.com/abiyudaA/Feet-Feeds",
+      demo: "https://feet-n-feeds-cms.vercel.app",
+      category: "frontend",
+      period: "Feb 2025 - Feb 2025",
+      loginCredentials: [
+        { role: "Admin", email: "admin@mail.com", password: "123456" },
+      ],
+    },
+    {
       id: 1,
       title: "CRAND",
       description:
@@ -177,7 +203,7 @@ export default function Projects() {
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {["all", "fullstack", "mobile"].map((category) => (
+            {["all", "fullstack", "frontend", "mobile"].map((category) => (
               <Button
                 key={category}
                 variant={filter === category ? "default" : "outline"}
